@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	   xmlns:util="http://www.springframework.org/schema/util"
+	   xmlns:tx="http://www.springframework.org/schema/tx"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">	
+
+	<!-- jasypt -->
+	<bean id="encryptorConfig" class="org.jasypt.encryption.pbe.config.SimpleStringPBEConfig">
+		<property name="algorithm" value="PBEWithMD5AndDES"/>
+		<property name="password" value="${jasypt.password}"/>
+		<property name="providerName" value="SunJCE"/>
+		<property name="poolSize" value="1"/>
+		<property name="keyObtentionIterations" value="1000"/>
+		<property name="saltGeneratorClassName" value="org.jasypt.salt.RandomSaltGenerator"/>
+		<property name="stringOutputType" value="base64"/> 
+	</bean>
+	<bean id="encryptor" class="org.jasypt.encryption.pbe.PooledPBEStringEncryptor">
+		<property name="config" ref="encryptorConfig"></property>
+	</bean>
+	<bean class="org.jasypt.spring4.properties.EncryptablePropertyPlaceholderConfigurer">
+		<constructor-arg ref="encryptor"></constructor-arg>
+		<property name="locations">
+			<list>
+				<value>classpath:/property/${spring.profiles.active}/*.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<util:properties id="db" location="classpath:/property/${spring.profiles.active}/db.properties"/>
+	<util:properties id="file" location="classpath:/property/${spring.profiles.active}/file.properties"/>
+
+	<!-- DataSource 인스턴스 생성 및 등록 -->
+	 <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+    		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"/>
+    		<property name="url" value="${db.url}"/>
+    		<property name="username" value="${db.username}"/>
+    		<property name="password" value="${db.password}"/>
+    </bean>
+
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactory"/>
+	</bean>
+
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="configLocation" value="classpath:/database/sql-mapper-config.xml"></property>
+		<property name="mapperLocations" value="classpath:/database/mappers/**/*.xml"></property>
+	</bean>
+
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+		<property name="basePackage" value="com.everyparking.admin.**.dao" />
+	</bean>
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <constructor-arg ref="dataSource"/>
+    </bean>
+
+</beans>
