@@ -1,0 +1,14 @@
+/* layout.css */
+
+.header {
+  position: absolute;
+  z-index: 1;
+  left : 0;
+  top : 0;
+  width : 20%;
+}
+.content {
+  width : 100%;
+  padding-left : 20%;
+  box-sizing: border-box;
+}

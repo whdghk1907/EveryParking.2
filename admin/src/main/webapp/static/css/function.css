@@ -1,0 +1,34 @@
+/* function.css */
+
+
+.uppercase {
+  text-transform : uppercase;
+}
+.capitalize {
+  text-transform : capitalize;
+}
+.lowercase {
+  text-transform : lowercase;
+}
+.clearfix {
+  height : auto;
+}
+.clearfix:after,
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear : both;
+}
+.flex {
+  display: flex;
+}
+.flexSB {
+  justify-content: space-between;
+}
+.flexC {
+  justify-content: center;
+}
+
+.tab-content{display: none;}
+
+.tab-content.selected{display: flex;}

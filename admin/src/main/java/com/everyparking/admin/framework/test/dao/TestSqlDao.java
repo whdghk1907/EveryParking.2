@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 @Mapper
 @Repository
 public interface TestSqlDao {
-	public HashMap<String, Object> DBTest(HashMap<String, Object> params);
+	
+	public HashMap<String, Object> DBTest();
 
 }

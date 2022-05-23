@@ -1,0 +1,35 @@
+/* font */
+@font-face {
+  font-family : 'NotoSansKR';
+  font-weight : 300;
+  src : url("NotoSansKR-Light.otf");
+}
+@font-face {
+  font-family : 'NotoSansKR';
+  font-weight : 400;
+  src : url("NotoSansKR-Regular.otf");
+}
+@font-face {
+  font-family : 'NotoSansKR';
+  font-weight : 500;
+  src : url("NotoSansKR-Medium.otf");
+}
+@font-face {
+  font-family : 'NotoSansKR';
+  font-weight : 600;
+  src : url("NotoSansKR-Bold.otf");
+}
+@font-face {
+  font-family : 'Khand';
+  font-weight : 400;
+  src : url("Khand-Regular.ttf");
+}
+@font-face {
+  font-family : 'Khand';
+  font-weight : 500;
+  src : url("Khand-Medium.ttf");
+}
+* {
+  font-family: 'NotoSansKR', 'Khand';
+  color : #333;
+}

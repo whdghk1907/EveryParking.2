@@ -34,8 +34,11 @@
 	</bean>
 
 	<util:properties id="db" location="classpath:/property/${spring.profiles.active}/db.properties"/>
+	
+	<!-- 
 	<util:properties id="file" location="classpath:/property/${spring.profiles.active}/file.properties"/>
-
+	 -->
+	 
 	<!-- DataSource 인스턴스 생성 및 등록 -->
 	 <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
     		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"/>
@@ -43,17 +46,14 @@
     		<property name="username" value="${db.username}"/>
     		<property name="password" value="${db.password}"/>
     </bean>
-
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactory"/>
 	</bean>
-
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
 		<property name="configLocation" value="classpath:/database/sql-mapper-config.xml"></property>
 		<property name="mapperLocations" value="classpath:/database/mappers/**/*.xml"></property>
 	</bean>
-
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 		<property name="basePackage" value="com.everyparking.admin.**.dao" />

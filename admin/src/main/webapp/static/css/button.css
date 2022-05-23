@@ -1,0 +1,202 @@
+/* button.css */
+
+
+.btn {
+  width : 100%;
+  height: 70px;
+  border-radius: 5px;
+  transition: all 500ms ease;
+}
+.bg01 {
+  background-color: #a6a6a6;
+  color : #fff;
+}
+.bg01:hover,
+.bg01:focus {
+  background-color: #0D6EFD;
+}
+.topBtn {
+  width: 160px;
+  height: 60px;
+  background-color: #42434C;
+  border-radius: 5px;
+}
+.topBtn a {
+  color: #fff;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+}
+.popBtn button {
+  width: 140px;
+  height: 40px;
+  background-color: #c5c5c5;
+  font-size: 16px;
+  color: #5c5c5c;
+  border-radius: 5px;
+  transition: all 250ms;
+  margin-left: 20px;
+}
+.popBtn button.canselBtn:hover  {
+  color: #fff;
+  background-color: #5c5c5c;
+  transition: all 250ms;
+}
+.popBtn button.delBtn:hover  {
+  color: #fff;
+  background-color: #EE3841;
+  transition: all 250ms;
+}
+.popBtn button.okBtn:hover  {
+  color: #fff;
+  background-color: #0D6EFD;
+  transition: all 250ms;
+}
+.rightBottomBtn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+.rightBottomBtn button {
+  width: 160px;
+  height: 60px;
+  margin-left: 20px;
+  background-color: #c5c5c5;
+  font-size: 16px;
+  color: #5c5c5c;
+  border-radius: 5px;
+  transition: all 250ms;
+}
+.rightBottomBtn button:first-of-type:hover {
+  background-color: #5c5c5c;
+  color: #fff;
+  transition: all 250ms;
+}
+.rightBottomBtn button:last-of-type:hover {
+  background-color: #0D6EFD;
+  color: #fff;
+  transition: all 250ms;
+}
+.rightBottomBtn02 {
+  margin: 0 40px 40px 0;
+}
+
+.leftBottomBtn {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40px;
+}
+.leftBottomBtn button {
+  width: 160px;
+  height: 60px;
+  margin-left: 20px;
+  background-color: #c5c5c5;
+  font-size: 16px;
+  color: #5c5c5c;
+  border-radius: 5px;
+  transition: all 250ms;
+}
+.leftBottomBtn button:first-of-type:hover {
+  background-color: #5c5c5c;
+  color: #fff;
+  transition: all 250ms;
+}
+.leftBottomBtn button:last-of-type:hover {
+  background-color: #0D6EFD;
+  color: #fff;
+  transition: all 250ms;
+}
+.leftBottomBtn02 {
+  margin: 0 40px 40px 0;
+}
+
+
+/* countWrap */
+.countWrap {
+  display: flex;
+}
+.countBtn {
+  width: 30px;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  flex-direction: column;
+}
+.countBtn button {
+  display: block;
+  height: 20px;
+  background-color:#f5f5f5;
+  transition: all 50ms;
+}
+.countBtn button:first-of-type {
+  border-radius: 0 5px 0 0;
+}
+.countBtn button:last-of-type {
+  border-radius: 0 0 5px 0;
+  border-top: 1px solid #ddd;
+}
+.countBtn button:active {
+  background-color: #9c9c9c;
+  transition: all 50ms;
+}
+.countBtn button img {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+}
+
+
+/* mainCon-TopBtnWrap */
+.mainCon-TopBtnWrap {
+  justify-content: flex-end;
+}
+.mainCon-TopBtnWrap ul {
+  display: flex;
+}
+.mainCon-TopBtnWrap ul li {
+  margin-left: 10px;
+  width: 60px;
+  height: 40px;
+  border-radius: 5px;
+  transition: all 250ms;
+}
+.mainCon-TopBtnWrap ul li:hover {
+  background-color: #c5c5c5;
+  transition: all 250ms;
+}
+.mainCon-TopBtnWrap ul .listIcon {
+  background: url('../img/list.svg') no-repeat center;
+  background-color: #f5f5f5;
+}
+.mainCon-TopBtnWrap ul .chartIcon {
+  background: url('../img/chart.svg') no-repeat center;
+  background-color: #f5f5f5;
+}
+.mainCon-TopBtnWrap ul .listIcon.act {
+  background: url('../img/list_act.svg') no-repeat center;
+  background-color: #0D6EFD;
+}
+.mainCon-TopBtnWrap ul .chartIcon.act {
+  background: url('../img/chart_act.svg') no-repeat center;
+  background-color: #0D6EFD;
+}
+
+
+/* .calendarSearch */
+.calendarSearch {
+  width: 60px;
+  height: 40px;
+  background-color: #c5c5c5;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 16px;
+  transition: all 250ms;
+}
+.calendarSearch:hover {
+  background-color: #0D6EFD;
+  color: #fff;
+  transition: all 250ms;
+}

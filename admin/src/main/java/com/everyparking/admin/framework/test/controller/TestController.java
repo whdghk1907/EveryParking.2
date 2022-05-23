@@ -17,8 +17,8 @@ public class TestController {
 	private TestService testService;
 	
 	@RequestMapping("/test")
-	public String DBTest(HashMap<String, Object> params, Model model) {	
-		model.addAttribute("test", testService.DBTest(params));
+	public String DBTest(Model model) {	
+		model.addAttribute("test", testService.DBTest());
 		return "/test/test";
 	}
 	
