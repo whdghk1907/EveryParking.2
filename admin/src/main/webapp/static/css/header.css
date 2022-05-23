@@ -1,0 +1,150 @@
+/* header.css */
+
+
+.header {
+  padding : 80px 0 0; 
+  box-sizing: border-box;
+  background-color: #42434D;
+
+}
+.header .userInfo {
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+}
+.header .userInfo span {
+  font-weight: 300;
+  font-size: 18px;
+  color: #fff;
+}
+.header .userProfile {
+  display: block;
+  margin-right: 40px;
+}
+
+.nav,
+.nav dl {
+  width : 100%;
+}
+.nav dl dt:nth-child(1){
+  margin-top: 80px;
+}
+.nav dl dt {
+  position: relative;
+  width : 100%;
+  height : 55px;
+  margin : 60px 0 10px;
+  padding : 0 40px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.nav dl dt.act::after {
+  position: absolute;
+  right : 0;
+  top : 0;
+  content : "";
+  display: block;
+  width : 10px;
+  height: 100%;
+  background-color : #0D6EFD;
+}
+.nav dl dt > .icon {
+  float: left;
+  display: inline-block;
+  width : 35px;
+  height: 35px;
+  margin-top : 10px;
+  margin-right : 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+.nav dl dt.lighten span {
+  color: #fff;
+  opacity: 65%;
+}
+.nav dl dt > .icon.home {
+  background-image: url("/img/home.svg");
+}
+.nav dl dt > .icon.parking {
+  background-image: url("/img/parking.svg");
+}
+.nav dl dt > .icon.cs {
+  background-image: url("/img/cs.svg");
+}
+.nav dl dt.lighten  > .icon.home {
+  background-image: url("/img/home_act.svg");
+  opacity: 65%;
+}
+.nav dl dt.lighten  > .icon.parking {
+  background-image: url("/img/parking_act.svg");
+  opacity: 65%;
+}
+.nav dl dt.lighten  > .icon.cs {
+  background-image: url("/img/cs_act.svg");
+/*   opacity: 65%; */
+}
+
+.nav dl dt > .icon.logout {
+  background-image: url("/img/unlock2.svg");
+}
+
+.nav dl dt > span {
+  display: inline-block;
+  height: 100%;
+  line-height: 55px;
+  color : rgba(255,255,255,0.2);
+  font-size: 18px;
+  font-weight: 500;
+}
+.nav dl dt.act > span {
+  color : #fff;
+}
+.nav dl dt.act > span a {
+  color : #fff;
+}
+.nav dl dd {
+  width : 100%;
+  height: 55px;
+  font-size: 18px;
+  margin : 10px 0;
+  padding-left : 115px;
+  box-sizing: border-box;
+  color : rgba(255,255,255,0.2);
+  cursor: pointer;
+}
+.nav dl dd.act {
+  color : #fff;
+}
+.nav dl .focus {
+  background-color : #33333A;
+  position: relative;
+}
+.nav dl dd.focus::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content : "";
+  display: block;
+  width : 10px;
+  height: 55px;
+  background-color : #0D6EFD;
+}
+.nav dl .focus a {
+  color: #fff;
+}
+.nav dl a{
+  width: 100%;
+  height: 100%;
+  display: block;
+  line-height: 55px;
+  transition: all 200ms;
+}
+.nav dl a:hover {
+  color: #fff;
+  transition: all 200ms;
+}
+.nav dl dt a {
+  font-size: 18px;
+  font-weight: 500;
+}

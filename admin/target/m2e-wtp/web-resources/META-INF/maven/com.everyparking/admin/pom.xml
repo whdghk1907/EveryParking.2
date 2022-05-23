@@ -105,6 +105,11 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.bgee.log4jdbc-log4j2</groupId>
+			<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
+			<version>1.16</version>
+		</dependency>
+		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.15</version>
@@ -163,6 +168,19 @@
 			<scope>test</scope>
 		</dependency>
 		
+		<!--  tiles  -->
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-jsp</artifactId>
+			<version>3.0.8</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-el</artifactId>
+			<version>3.0.8</version>
+		</dependency>
+				
 		<!-- https://mvnrepository.com/artifact/org.jasypt/jasypt 암호화 라이브러리 -->
 		<dependency>
 			<groupId>org.jasypt</groupId>

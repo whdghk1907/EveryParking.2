@@ -1,0 +1,12 @@
+.modal-content{border-radius:inherit;}
+.modalBtn{width:100px;height:35px;border:none;font: -webkit-small-control;}
+.modalStyle{color: #000;}
+hr{margin-top:8px;margin-bottom:20px;background-color: #000;}
+i{vertical-align: baseline;padding-right:5px;}
+
+#blockreasonModal .modal-content{width:max-content;max-width: 600px;}
+
+#blockreasonModal .modal-title{font-size:17px;}
+#blockreasonModal hr{margin-bottom:30px;}
+#blockreasonModal a{text-decoration: none;color:#000;}
+#blockreasonModal a:hover{color:#000;}

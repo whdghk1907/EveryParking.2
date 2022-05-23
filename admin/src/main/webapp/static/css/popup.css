@@ -1,0 +1,96 @@
+/* popup */
+
+
+/* delPopup */
+.popWrap01 {
+    display: none;
+}
+.popWrap02 {
+    display: none;
+}
+.popBg {
+    width: 100%;
+    height: 100%;
+    background-color: #16171B;
+    opacity: 65%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+.delPopup {
+    width: 800px;
+    height: 300px;
+    padding: 40px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 999;
+}
+
+.delPopup02 {
+    width: 800px;
+    height: 600px;
+    padding: 40px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 999;
+}
+.popTitle {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.popTitle h3 {
+    color: #afafaf;
+    padding-left: 10px;
+    font-size: 24px;
+}
+.delPopup p {
+    font-size: 20px;
+    padding-top: 20px;
+}
+.popBtn {
+    display: flex;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.blockReason:hover {
+    color: #0D6EFD;
+    text-decoration: underline;
+    transition: all 100ms;
+    cursor: pointer;
+}
+
+.modalInfo textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #333;
+  padding: 10px;
+  resize: none;
+}
+
+.commentBtn {
+	margin-left: 10px;
+}
+
+.replyWidth {
+	margin-left: 50px;
+	display: inline;
+}

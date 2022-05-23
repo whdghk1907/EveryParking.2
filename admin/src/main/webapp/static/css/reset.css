@@ -1,0 +1,39 @@
+/* reset.css */
+
+* {
+  box-sizing: border-box;
+}
+html, body { 
+  width : 100%; margin : 0; padding : 0; color : #333; letter-spacing: -0.5px;
+} 
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, address, ul, ol, li, dl, dt, dd, img, br, hr, div { 
+  margin : 0; padding : 0; border : 0; outline : 0; 
+} 
+h1, h2, h3, h4, h5, h6 { 
+  font-size : 1rem; font-weight: 400;
+} 
+ul, li, ol { 
+  list-style : none; 
+} 
+a { 
+  color : inherit; text-decoration: none; cursor: pointer;
+} 
+header, nav, section, article, footer, aside, main, figure, figcaption { 
+  display : block;  
+} 
+abbr { 
+  text-decoration: none; 
+} 
+address { 
+  font-style: normal; 
+} 
+fieldset { 
+  padding : 0;  margin : 0;  border : 0; 
+} 
+button { 
+  border : 0; background-color : transparent; outline: none; cursor: pointer; 
+} 
+input, select, textarea { 
+  outline: none; 
+}
+
